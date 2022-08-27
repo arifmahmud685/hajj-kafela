@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Kaba Hajj Kafela</title>
+    <script src="https://kit.fontawesome.com/a6342d96d9.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <div class="container bg-gray-200 mx-auto">
+           <div class="flex justify-between content-center p-2">
+            <div>
+                <div class="flex space-x-4 ">
+                    <div class="">
+                        <span class="fa fa-phone"></span>
+                        <a href="58314758">58314758</a>
+                    </div>
+                    <div>
+                        <span class="fa fa-envelope-o"></span>
+                        <a href="mailto:deshbhraman1989@yahoo.com">deshbhraman1989@yahoo.com</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="flex space-x-4 ">
+                    <div class="">
+                        <span class="fa fa-info-circle"></span>
+                        <a href="#" title="Get a Quote">Get a Quote </a>
+                    </div>
+                    <div>
+                        <span class="fa fa-user"></span>
+                        <a href="#" title="Need an Agent?">Need an Agent?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+           </div>
+        <section class="container mx-auto bg-gray-100 flex justify-between p-8">
+            <div class="">
+                <h2 class="text-2xl font-extrabold">Al Kaba Hajj Kafela</h2>
+            </div>
+            <!-- left header section -->
+            <div class="">
+                <div class="items-center  space-x-8 flex">
+                    <h1 class="text-xl text-gray-600 "><a href="about_us.html">HOME</a></h1>
+                    <h1 class="text-xl text-gray-600"><a href="we_offer.html">Hajj Management</a></h1>
+                    <h1 class="text-xl text-gray-600"><a href="inquiry.html">Umrah Offers</a></h1>
+                    <h1 class="text-xl text-gray-600"><a href="strength.html">Facilities</a></h1>
+                    <h1 class="text-xl text-gray-600"><a href="online-order.html">Guidance</a></h1>
+                    <h1 class="text-xl text-gray-600"><a href="gallery.html">About Us</a></h1>
+                </div>
+            </div>
+            
+        </section>
+        <div class="">
+            <div class="relative w-full mx-auto overflow-hidden h-96">
+                <div class="slide relative">
+                    <img class="w-full h-96 object-cover"
+                        src="images/hajj-1.jpg">
+                </div>
+        
+                <div class="slide relative">
+                    <img class="w-full h-96 object-cover"
+                        src="images/hajj-2.webp">
+                </div>
+        
+                <div class="slide relative">
+                    <img class="w-full h-96 object-cover"
+                        src="images/hajj-3.jpg">
+                </div>
+        
+                <!-- The previous button -->
+                <a class="absolute left-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
+                    onclick="moveSlide(-1)">❮</a>
+        
+                <!-- The next button -->
+                <a class="absolute right-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
+                    onclick="moveSlide(1)">❯</a>
+        
+            </div>
+        
+            <!-- The dots -->
+            <!-- <div class="flex justify-center items-center space-x-5">
+                <div class="dot w-4 h-4 rounded-full cursor-pointer" onclick="currentSlide(1)"></div>
+                <div class="dot w-4 h-4 rounded-full cursor-pointer" onclick="currentSlide(2)"></div>
+                <div class="dot w-4 h-4 rounded-full cursor-pointer" onclick="currentSlide(3)"></div>
+            </div> -->
+        
+            <!-- Javascript code -->
+            <script>
+                // set the default active slide to the first one
+                let slideIndex = 1;
+                showSlide(slideIndex);
+        
+                // change slide with the prev/next button
+                function moveSlide(moveStep) {
+                    showSlide(slideIndex += moveStep);
+                }
+        
+                // change slide with the dots
+                function currentSlide(n) {
+                    showSlide(slideIndex = n);
+                }
+        
+                function showSlide(n) {
+                    let i;
+                    const slides = document.getElementsByClassName("slide");
+                    const dots = document.getElementsByClassName('dot');
+                    
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+        
+                    // hide all slides
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].classList.add('hidden');
+                    }
+        
+                    // remove active status from all dots
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].classList.remove('bg-yellow-500');
+                        dots[i].classList.add('bg-green-600');
+                    }
+        
+                    // show the active slide
+                    slides[slideIndex - 1].classList.remove('hidden');
+        
+                    // highlight the active dot
+                    dots[slideIndex - 1].classList.remove('bg-green-600');
+                    dots[slideIndex - 1].classList.add('bg-yellow-500');
+                }
+            </script>
+        </div>
+    </header>
+    <main>
+        <section class="container mx-auto bg-emerald-400 ">
+            <div class="flex p-10 ">
+                <div>
+                    <h2 class="text-3xl">HOW WE</h2>
+                    <h1 class="text-4xl font-semibold">WORK</h1>
+                    <p class="font-medium w-64 text-lg">Al Kaba Hajj Kafela is warmly welcoming Muslims of Bangladesh and offers the best hajj and umrah packages for them and their families from the capital Dhaka and all over Bangladesh.</p>
+                </div>
+                <div class="w-5/6">
+                    <h5 class="text-2xl font-bold mb-6 ml-10">4 simple steps of hajj and umrah service from dhaka:</h5>
+                    <div class="flex justify-evenly">
+                        <div>
+                            <a href="" title="Looking for best Hajj and Umrah package in Bangladesh? Book Now.">
+                                <img src="images/booking.png" alt="Book Hajj and Umrah package from Bangladesh" title="Looking for best Hajj and Umrah package in Bangladesh? Book Now." class="mb-3 border-2 p-4 border-black">
+                            </a>
+                            <a href="" title="Looking for best Hajj and Umrah package in Bangladesh? Book Now." class="text-green-400 bg-black rounded-full p-2">
+                                <span class="p-1">1</span>
+                                BOOK ONLINE
+                            </a>
+                        </div>
+                        <div class="px-6">
+                            <a href="" >
+                                <img src="images/passport.png" alt="Al Kaba Hajj Kafela offers quick Visa Processing in Bangladesh." title="The Al Kaba Hajj Kafela travel agency may ensure you to get the visa without any hassle." class="mb-3 border-2 p-4 border-black">
+                            </a>
+                            <a href="" title="The Al Kaba Hajj Kafela travel agency may ensure you to get the visa without any hassle." class="text-green-400 bg-black rounded-full p-2">
+                                <span class="p-1">2</span>
+                                VISA PROCESSING
+                            </a>
+                        </div>
+                        <div>
+                            <a href="" >
+                                <img src="images/places.png" alt="Al Kaba Hajj Kafela offers very experience travel guide for Hajj and Umrah" title="Al Kaba Hajj Kafela offers very experience travel guide for Hajj and Umrah" class="mb-3 border-2 p-4 border-black">
+                            </a>
+                            <a href="" title="Travel Guide Hajj & Umrah | A lifetime experience for umrah seekers" class="text-green-400 bg-black rounded-full p-2">
+                                <span class="p-1">3</span>
+                                TRAVEL HOLY PLACES
+                            </a>
+                        </div>
+                        <div>
+                            <a href="" >
+                                <img src="images/world.png" alt="Safely return at home after perform Hajj and Umrah" title="The Al Kaba Hajj Kafela provide service to safely return at home after perform Hajj and Umrah" class="mb-3 border-2 p-4 border-black">
+                            </a>
+                            <a href="" title="The Al Kaba Hajj Kafela provide service to safely return at home after perform Hajj and Umrah" class="text-green-400 bg-black rounded-full p-2">
+                                <span class="p-1">4</span>
+                                SAFELY RETURN
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container mx-auto p-6 border-x-2 border-gray-200">
+            <h2 class="text-xl text-emerald-600 mb-6 mt-6"><span class="text-5xl">WHAT,</span>  DO WE OFFER?</h2>
+            <div class="flex flex-wrap">
+                <div class="mb-4 w-1/4">
+                    <i class="fa fa-caret-right"></i>
+                    <a href="" title="The Al Kaba Hajj Kafela offers High quality hotel facilities." class="text-emerald-600"> HOTEL BOOKING</a>
+                </div>
+                <div class="mb-4 w-1/4">
+                    <i class="fa fa-caret-right"></i>
+                    <a href="" title="The Al Kaba Hajj Kafela offers High quality hotel facilities." class="text-emerald-600"> ROUND TRIP FLIGHT</a>
+                </div>
+                <div class="mb-4 w-1/4">
+                    <i class="fa fa-caret-right"></i>
+                    <a href="" title="The Al Kaba Hajj Kafela offers High quality hotel facilities." class="text-emerald-600"> VISA PROCESSING</a>
+                </div>
+                <div class="mb-4 w-1/4">
+                    <i class="fa fa-caret-right"></i>
+                    <a href="" title="The Al Kaba Hajj Kafela offers High quality hotel facilities." class="text-emerald-600"> UMRAH PACKAGES</a>
+                </div>
+                <div class="mb-4 w-1/4">
+                    <i class="fa fa-caret-right"></i>
+                    <a href="" title="The Al Kaba Hajj Kafela offers High quality hotel facilities." class="text-emerald-600"> ZIYARAT TOURS</a>
+                </div>
+                <div class="mb-4 w-1/4">
+                    <i class="fa fa-caret-right"></i>
+                    <a href="" title="The Al Kaba Hajj Kafela offers High quality hotel facilities." class="text-emerald-600"> HAJJ OFFERS</a>
+                </div>
+                <div class="mb-4 w-1/4">
+                    <i class="fa fa-caret-right"></i>
+                    <a href="" title="The Al Kaba Hajj Kafela offers High quality hotel facilities." class="text-emerald-600"> UMRAH OFFERS</a>
+                </div>
+            </div>
+        </div>
+        <section class="bg-emerald-400 ">
+            <div class="flex px-10">
+                <div class="w-1/5 p-10">
+                    <a href="" >
+                        <img src="images/kaaba.png" alt="" title="The Al Kaba Hajj Kafela offers best & possibly lowest rate in Bangladesh" class="mb-2">
+                    </a>
+                    <a href="" title="The Al Kaba Hajj Kafela offers best & possibly lowest rate and perform Hajj with your family and friends.">
+                        <p class="text-center text-xl font-semibold">Hajj</p>
+                    </a>
+                </div>
+                <div class="w-1/5 p-10">
+                    <a href="" >
+                        <img src="images/mosque.png" alt="" title="The Holy Hajj and Umrah agency has led the best umrah service & offer in Dhaka,Bangladesh" class="mb-2">
+                    </a>
+                    <a href="" title="The Holy Hajj and Umrah agency has led the best umrah service & offer in Dhaka,Bangladesh">
+                        <p class="text-center text-xl font-semibold">Umrah</p>
+                    </a>
+                </div>
+                <div class="w-1/5 p-10">
+                    <a href="" >
+                        <img src="images/review.png" alt="" title="The Al Kaba Hajj Kafela offers luxurious hotel facilities for Hajj and Umrah." class="mb-2">
+                    </a>
+                    <a href="" title="The Al Kaba Hajj Kafela offers luxurious hotel facilities for Hajj and Umrah.">
+                        <p class="text-center text-xl font-semibold">Hotel</p>
+                    </a>
+                </div>
+                <div class="w-1/5 p-10">
+                    <a href="" >
+                        <img src="images/analysis.png" alt="" title="The Al Kaba Hajj Kafela provide training facilities to Bangladeshi Hajji in Dhaka." class="mb-2">
+                    </a>
+                    <a href="" title="The Al Kaba Hajj Kafela provide training facilities to Bangladeshi Hajji in Dhaka.">
+                        <p class="text-center text-xl font-semibold">Training</p>
+                    </a>
+                </div>
+                <div class="w-1/5 p-10">
+                    <a href="" >
+                        <img src="images/travel-and-tourism.png" alt="" title="The Al Kaba Hajj Kafela offers very experience Tour Guide for Hajj and Umrah perform." class="mb-2">
+                    </a>
+                    <a href="" title="The Al Kaba Hajj Kafela offers very experience Tour Guide for Hajj and Umrah perform.">
+                        <p class="text-center text-xl font-semibold">our Guide</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="mt-20 bg-white">
+            <div class="mt-4 text-center">
+              <h3 class="text-3xl font-bold ">Best Deal</h3>
+              <h2 class="text-4xl font-bold text-emerald-600 mb-6">
+                Umrah Hajj Packages from Dhaka, Bangladesh</h2>
+            </div>
+            <div class="container w-full px-5 py-6 mx-auto">
+              <div class="grid lg:grid-cols-4 gap-y-6">
+                <div class="max-w-xs mx-4 mb-2 rounded-lg shadow-lg">
+                  <img class="w-full h-48" src="images/package-1.jpg"
+                    alt="Image" />
+                  <div class="px-6 py-4">
+                    <h4 class="mb-3 text-xl font-semibold tracking-tight text-green-600 uppercase">Hajj Offers</h4>
+                    <p class="leading-normal text-gray-700">Al Kaba Hajj Kafela team understands the importance of the sacred journey and we put all our efforts to satisfy the travel needs of the pilgrims. Please check out the best hajj package from Dhaka Bangladesh.</p>
+                  </div>
+                  <div class="flex items-center justify-between p-4">
+                    <button class="px-4 py-2 bg-green-600 text-green-50 hover:text-black">learn about hajj offers </button>
+                  </div>
+                </div>
+                <div class="max-w-xs mx-4 mb-2 rounded-lg shadow-lg">
+                  <img class="w-full h-48" src="images/package-2.jpg"
+                    alt="Image" />
+                  <div class="px-6 py-4">
+                    <h4 class="mb-3 text-xl font-semibold tracking-tight text-green-600 uppercase">Umrah Offers</h4>
+                    <p class="leading-normal text-gray-700">Al Kaba Hajj Kafela providing golden 5 star Umrah package. We offer you silver 4 star Umrah packages and our profound bronze 3 star Umrah packages at lowest price in Dhaka Bangladesh.</p>
+                  </div>
+                  <div class="flex items-center justify-between p-4">
+                    <button class="px-4 py-2 bg-green-600 text-green-50 hover:text-black">learn about umrah offers</button>
+                  </div>
+                </div>
+      
+                <div class="max-w-xs mx-4 mb-2 rounded-lg shadow-lg">
+                  <img class="w-full h-48" src="images/package-3.jpg"
+                    alt="Image" />
+                  <div class="px-6 py-4">
+                    <h4 class="mb-3 text-xl font-semibold tracking-tight text-green-600 uppercase">Umrah Package</h4>
+                    <p class="leading-normal text-gray-700">Perform Holy Umrah right according to your desire with the help of Holyhajjnumrah customized Umrah package. Get the best deal at a possibly lowest rate from Dhaka Bangladesh.</p>
+                  </div>
+                  <div class="flex items-center justify-between p-4">
+                    <button class="px-4 py-2 bg-green-600 text-green-50 hover:text-black">choose best umrah package </button>
+                  </div>
+                </div>
+      
+                <div class="max-w-xs mx-4 mb-2 rounded-lg shadow-lg">
+                  <img class="w-full h-48" src="images/package-4.jpg"
+                    alt="Image" />
+                  <div class="px-6 py-4">
+                    <h4 class="mb-3 text-xl font-semibold tracking-tight text-green-600 uppercase">Hotel Reservation</h4>
+                    <p class="leading-normal text-gray-700">Al Kaba Hajj Kafela is one of the best Hajj and Umrah travel agents, who will give you full-fledged support of visa processing, air ticket & booking in cheap hotels in Makkah near Haram and altogether a perfect travel guide.</p>
+                  </div>
+                  <div class="flex items-center justify-between p-4">
+                    <button class="px-4 py-2 bg-green-600 text-green-50 hover:text-black">book cheap hotels in makkah </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="bg-black mt-4">
+            <div class="p-20">
+                <h2 class="text-4xl font-semibold text-emerald-500">A smart choice of :</h2>
+                <h4 class="text-2xl font-medium text-emerald-500">budget-friendly & luxury package for a convenient hajj and umrah journey to the holy makkah & madinah for muslim brothers and sisters from Dhaka, Bangladesh</h4><br>
+                <p class="text-lg text-gray-400">Hajj is the 'fifth pillar of Islam' and a fundamental responsibility for every muslim who is physically fit and has sufficient financial resources to perform Hajj tours at least once in his lifetime. Literally, Hajj means to “set out for a place.” In Islam it has a broad meaning. It is more than just visiting a place. It’s a spiritual journey to remove all the sins of previous life and an opportunity to beg pardon for all the sins committed in the past.
+                <br><br>
+                Offering prayers in the Kaaba and Masjid-e-Nabvi and walking in the streets where the Holy Prophet (PBUH) used to walk is the greatest desire of every Muslim. It is the dream of every Muslim to perform Hajj tours but very few can convert it into reality.    
+                </p>
+            </div>
+          </section>
+          <section class="p-20">
+            <h2 class="text-5xl text-center text-emerald-500 font-bold mb-10 ">Contact Us</h2>
+            <div class="flex justify-evenly">
+                <div class="grid-cols-1 w-1/2">
+                    <div class="mb-6">
+                        <img src="images/alhajj-tofayel-islam.jpg" alt="" class="mb-2 ">
+                        <h2 class="font-medium">Al-hajj Md. Tofayel Islam</h2>
+                        <h2 class="font-medium">Phone: 01683-397899, 01552-342208</h2>
+                        <h2 class="font-medium">Email: tofayel_islam@yahoo.com</h2>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl text-emerald-500 mb-3 font-bold">Deal with reliable hajj agency in Dhaka</h2>
+                        <h4 class="text-2xl">Al Kaba Hajj Kafela Services</h4>
+                        <ul class="list-disc list-inside">
+                            <LI class="text-lg">We offering the best Hajj and Umrah package, Visa Processing, Hajj training in Dhaka, Comilla, Noakhali, Sylhet, Barishal, Chittagong, Khulna, Rangpur, Bangladesh.</LI>
+                            <li class="text-lg">Rupayan Taj (7th Floor), sweet #f-6,1,1/1, Culvert Road, Nayapaltan,
+                                Dhaka-1000, Bangladesh</li>
+                            <li class="text-lg">Local Office: 1103/a (2nd Floor), Ring Road, Adabor, Dhaka-1207</li>
+                            <li class="text-lg">Section Office: Burichang Shopping Center (South Bazar), Burichang, Cumilla</li>
+                            <li class="text-lg">We are Govt Approved Hajj & Umrah Agency. Our Hajj Licence No: 0051</li>
+                            <li class="text-lg">Telephone: 58314758, 58314759</li>
+                            <li class="text-lg">Email: deshbhraman1989@yahoo.com</li>
+                            <li class="text-lg">Fax: 880-2-58314759</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div class="w-1/2">
+                    
+                    <form class="p-10 bg-white rounded-lg drop-shadow-lg space-y-4" action="">
+                        <h2 class="text-2xl font-semibold">Write to us:</h2>
+                        <!-- Name -->
+                        <div class="flex flex-col">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" required class="peer border border-slate-400">
+                        </div>
+                
+                        <!-- Email -->
+                        <div class="flex flex-col">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required class="peer border border-slate-400">
+                        </div>
+                
+                        <!-- Message -->
+                        <div class="flex flex-col">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" cols="30" rows="3" required
+                                class="peer border border-slate-400"></textarea>
+                        <button type="submit" class="mt-4 px-5 py-1 bg-blue-500">Send</button>
+                    </form>
+                    
+                </div>
+                <div class="mt-4">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.397007983149!2d90.41007171404824!3d23.733218084597844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8f5fe710463%3A0x1fcee9300ab32d9b!2sRupayan%20Taj%2C%20Culvert%20Road%2C%20Dhaka%201205!5e0!3m2!1sen!2sbd!4v1661509859761!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+          </section>
+          
+    </main>
+    <footer>
+        <div
+                class="w-full h-auto bg-[url('images/mecca.jpg')] bg-cover bg-center ">
+                <div class="w-full h-auto flex flex-wrap justify-evenly backdrop-blur-sm pt-10 ">
+                    <div class="w-1/4 ml-16">
+                        <h2 class="text-2xl font-extrabold text-black mb-3">Al Kaba Hajj Kafela</h2>
+                        <p class="text-black my-2">Our Price Beat Guarantee Policy is not only to match the competition but also to beat the price.</p>
+                        <h2 class="text-xl text-black my-3">Follow Us</h2>
+                        <div class="flex space-x-4">
+                            <a href=""><span><i class="fa-brands fa-facebook fa-2x"></i></span></a>
+                            <a href=""><span><i class="fa-brands fa-linkedin fa-2x"></i></span></a>
+                            <a href=""><span><i class="fa-brands fa-instagram fa-2x"></i></span></a>
+                            <a href=""><span><i class="fa-brands fa-youtube fa-2x"></i></span></a>
+                        </div>
+                    </div>
+                    
+                    <div class="w-1/5">
+                        <h2 class="text-xl text-black mb-4">Shop Address</h2>
+                        <ul class="list-disc list-inside">
+                            <li class="text-md text-black">About Us</li>
+                            <li class="text-md text-black">Hajj Packages</li>
+                            <li class="text-md text-black">Hajj Guideline In English</li>
+                            <li class="text-md text-black">Umrah Guideline In Bangla</li>
+                            <li class="text-md text-black">Hajj Management Portal</li>
+                            <li class="text-md text-black">Book Now</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="w-1/4">
+                        <h2 class="text-xl text-black mb-4">Contact US</h2>
+                        <ul>
+                            <li class="text-black mb-2">
+                                <span class="icon fa fa-map-marker"></span>
+                                <p>Rupayan Taj (7th Floor), sweet #f-6,1,1/1, Culvert Road, Nayapaltan,
+                                Dhaka-1000, Bangladesh</p> 
+                                Local Office: 1103/a (2nd Floor), Ring Road, Adabor, Dhaka-1207
+                                <br>
+                                Section Office: Burichang Shopping Center (South Bazar), Burichang, Cumilla
+                            </li>
+                            <li class="text-black">
+                                <span class="icon fa fa-phone"></span>
+                                <p>58314758, 58314759</p> 
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-1/4">
+                        <h2 class="text-xl text-black mb-4">Accepted Payment</h2>
+                        <a href="#"><img src="images/payment-options.png" alt=""></a>
+                    </div>
+                    <div class="flex flex-col my-10">
+                        <a href="" class="text-center ">About Us | Contact Us | Privacy Policy</a>
+                        <h2 class="text-center">Copyright © 2022 Holy Hajj & Umrah Bangladesh | All rights reserved.</h2>
+                    </div>
+                    
+                </div>
+            </div>
+    </footer>
+</body>
+</html>

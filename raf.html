@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Kaba Hajj Kafela</title>
+    <script src="https://kit.fontawesome.com/a6342d96d9.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .carousel-open:checked+.carousel-item {
+          position: static;
+          opacity: 100;
+        }
+
+        .carousel-item {
+          -webkit-transition: opacity 0.6s ease-out;
+          transition: opacity 0.6s ease-out;
+        }
+
+        #carousel-1:checked~.control-1,
+        #carousel-2:checked~.control-2,
+        #carousel-3:checked~.control-3 {
+          display: block;
+        }
+
+        .carousel-indicators {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          bottom: 2%;
+          left: 0;
+          right: 0;
+          text-align: center;
+          z-index: 10;
+        }
+
+        #carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+        #carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+        #carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+          color: #2b6cb0;
+          /*Set to match the Tailwind colour you want the active one to be */
+        }
+      </style>
+</head>
+<body>
+    <header>
+        <div class="container bg-gray-200 mx-auto">
+           <div class="flex justify-between content-center p-2">
+            <div>
+                <div class="flex space-x-4 ">
+                    <div class="">
+                        <span class="fa fa-phone"></span>
+                        <a href="58314758">58314758</a>
+                    </div>
+                    <div>
+                        <span class="fa fa-envelope-o"></span>
+                        <a href="mailto:deshbhraman1989@yahoo.com">deshbhraman1989@yahoo.com</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="flex space-x-4 ">
+                    <div class="">
+                        <span class="fa fa-info-circle"></span>
+                        <a href="#" title="Get a Quote">Get a Quote </a>
+                    </div>
+                    <div>
+                        <span class="fa fa-user"></span>
+                        <a href="#" title="Need an Agent?">Need an Agent?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+           </div>
+        <section class="container mx-auto bg-gray-100 flex justify-between p-8">
+            <div class="">
+                <h2 class="text-2xl font-extrabold">Al Kaba Hajj Kafela</h2>
+            </div>
+            <!-- left header section -->
+            <div class="">
+                <div class="items-center  space-x-8 flex">
+                    <h1 class="text-xl text-gray-600 "><a href="about_us.html">HOME</a></h1>
+                    <h1 class="text-xl text-gray-600"><a href="we_offer.html">Hajj Management</a></h1>
+                    <h1 class="text-xl text-gray-600"><a href="inquiry.html">Umrah Offers</a></h1>
+                    <h1 class="text-xl text-gray-600"><a href="strength.html">Facilities</a></h1>
+                    <h1 class="text-xl text-gray-600"><a href="online-order.html">Guidance</a></h1>
+                    <h1 class="text-xl text-gray-600"><a href="gallery.html">About Us</a></h1>
+                </div>
+            </div>
+            
+        </section>
+        <div class="container mx-auto">
+            <div class="relative w-full mx-auto overflow-hidden">
+                <div class="slide relative">
+                    <img class="w-full h-[300px] object-cover"
+                        src="https://www.kindacode.com/wp-content/uploads/2022/07/flower-1.jpeg">
+                    <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-black">Flower One Caption</div>
+                </div>
+        
+                <div class="slide relative">
+                    <img class="w-full h-[300px] object-cover"
+                        src="https://www.kindacode.com/wp-content/uploads/2022/07/flower-2.jpeg">
+                    <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-black">Flower Two Caption</div>
+                </div>
+        
+                <div class="slide relative">
+                    <img class="w-full h-[300px] object-cover"
+                        src="https://www.kindacode.com/wp-content/uploads/2022/07/flower-3.jpeg">
+                    <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-black">Flower Three Caption
+                    </div>
+                </div>
+        
+                <!-- The previous button -->
+                <a class="absolute left-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-black hover:text-amber-500 cursor-pointer"
+                    onclick="moveSlide(-1)">❮</a>
+        
+                <!-- The next button -->
+                <a class="absolute right-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-black hover:text-amber-500 cursor-pointer"
+                    onclick="moveSlide(1)">❯</a>
+        
+            </div>
+            <br>
+        
+            <!-- The dots -->
+            <div class="flex justify-center items-center space-x-5">
+                <div class="dot w-4 h-4 rounded-full cursor-pointer" onclick="currentSlide(1)"></div>
+                <div class="dot w-4 h-4 rounded-full cursor-pointer" onclick="currentSlide(2)"></div>
+                <div class="dot w-4 h-4 rounded-full cursor-pointer" onclick="currentSlide(3)"></div>
+            </div>
+        
+            <!-- Javascript code -->
+            <script>
+                // set the default active slide to the first one
+                let slideIndex = 1;
+                showSlide(slideIndex);
+        
+                // change slide with the prev/next button
+                function moveSlide(moveStep) {
+                    showSlide(slideIndex += moveStep);
+                }
+        
+                // change slide with the dots
+                function currentSlide(n) {
+                    showSlide(slideIndex = n);
+                }
+        
+                function showSlide(n) {
+                    let i;
+                    const slides = document.getElementsByClassName("slide");
+                    const dots = document.getElementsByClassName('dot');
+                    
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+        
+                    // hide all slides
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].classList.add('hidden');
+                    }
+        
+                    // remove active status from all dots
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].classList.remove('bg-yellow-500');
+                        dots[i].classList.add('bg-green-600');
+                    }
+        
+                    // show the active slide
+                    slides[slideIndex - 1].classList.remove('hidden');
+        
+                    // highlight the active dot
+                    dots[slideIndex - 1].classList.remove('bg-green-600');
+                    dots[slideIndex - 1].classList.add('bg-yellow-500');
+                }
+            </script>
+        </div>
+    <main>
+            <div
+                class="w-full h-auto bg-[url('images/mecca.jpg')] bg-cover bg-center ">
+                <div class="w-full h-auto flex flex-wrap justify-evenly backdrop-blur-sm pt-10 ">
+                    <div class="w-1/4 ml-16">
+                        <h2 class="text-2xl font-extrabold text-black mb-3">Al Kaba Hajj Kafela</h2>
+                        <p class="text-black my-2">Our Price Beat Guarantee Policy is not only to match the competition but also to beat the price.</p>
+                        <h2 class="text-xl text-black my-3">Follow Us</h2>
+                        <div class="flex space-x-4">
+                            <a href=""><span><i class="fa-brands fa-facebook fa-2x"></i></span></a>
+                            <a href=""><span><i class="fa-brands fa-linkedin fa-2x"></i></span></a>
+                            <a href=""><span><i class="fa-brands fa-instagram fa-2x"></i></span></a>
+                            <a href=""><span><i class="fa-brands fa-youtube fa-2x"></i></span></a>
+                        </div>
+                    </div>
+                    
+                    <div class="w-1/5">
+                        <h2 class="text-xl text-black mb-4">Shop Address</h2>
+                        <ul class="list-disc list-inside">
+                            <li class="text-md text-black">About Us</li>
+                            <li class="text-md text-black">Hajj Packages</li>
+                            <li class="text-md text-black">Hajj Guideline In English</li>
+                            <li class="text-md text-black">Umrah Guideline In Bangla</li>
+                            <li class="text-md text-black">Hajj Management Portal</li>
+                            <li class="text-md text-black">Book Now</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="w-1/4">
+                        <h2 class="text-xl text-black mb-4">Contact US</h2>
+                        <ul>
+                            <li class="text-black mb-2">
+                                <span class="icon fa fa-map-marker"></span>
+                                <p>Rupayan Taj (7th Floor), sweet #f-6,1,1/1, Culvert Road, Nayapaltan,
+                                Dhaka-1000, Bangladesh</p> 
+                                Local Office: 1103/a (2nd Floor), Ring Road, Adabor, Dhaka-1207
+                                <br>
+                                Section Office: Burichang Shopping Center (South Bazar), Burichang, Cumilla
+                            </li>
+                            <li class="text-black">
+                                <span class="icon fa fa-phone"></span>
+                                <p>58314758, 58314759</p> 
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-1/4">
+                        <h2 class="text-xl text-black mb-4">Accepted Payment</h2>
+                        <a href="#"><img src="images/payment-options.png" alt=""></a>
+                    </div>
+                    <div class="flex flex-col">
+                        <a href="" class="text-center ">About Us | Contact Us | Privacy Policy</a>
+                        <h2 class="text-center">Copyright © 2022 Holy Hajj & Umrah Bangladesh | All rights reserved.</h2>
+                    </div>
+                    
+                </div>
+            </div>
+    </main>
+</body>
+</html>
